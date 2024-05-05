@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --Tomato: hsl(4, 100%, 67%);
+      --Dark-Slate-Grey: hsl(234, 29%, 20%);
+      --Charcoal-Grey: hsl(235, 18%, 26%);
+      --Grey: hsl(231, 7%, 60%);
+      --White: hsl(0, 0%, 100%);
+    }
+    html,
+    body {
+      height: 100%;
+      width: 100px;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--Charcoal-Grey);
+      font-family: "Roboto", sans-serif;
+    }
+    .container {
+      background-color: var(--White);
+      border-radius: 35.2px;
+      width: 504px;
+      height: 520px;
+      padding: 3rem 4rem;
+      display: flex;
+      flex-direction: column;
+      color: var(--Dark-Slate-Grey);
+      animation: turboo 1s ease-in-out;
+    }
+    .box h1 {
+      margin-top: 2.3rem;
+      font-size: 3.5rem;
+      font-weight: 500;
+      line-height: 3.5rem;
+      letter-spacing: 0.01rem;
+    }
+    .box p {
+      margin-top: 1.5rem;
+      line-height: 1.5rem;
+    }
+    button {
+      width: 376px;
+      height: 56px;
+      margin-top: 2.45rem;
+      padding-top: 0.1rem;
+      font-size: 0.99rem;
+      letter-spacing: -0.003rem;
+      color: var(--White);
+      border-radius: 8px;
+      border: none;
+      background-color: var(--Dark-Slate-Grey);
+      transition: ease-in 2.4s;
+    }
+    button:hover {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 83, 123, 1) 0%,
+        rgba(255, 105, 58, 1) 100%
+      );
+      box-shadow: 0 10px 25px #ff625766;
+      cursor: pointer;
+    }
+    @keyframes turboo {
+      0% {
+        opacity: 0;
+        transform: translateY(7rem);
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @media screen and (max-width: 590px) {
+      body {
+        background-color: var(--White);
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      button {
+        background-color: var(--Dark-Slate-Grey);
+        color: var(--White);
+        padding: 16px 60px;
+        border-radius: 12px;
+        font-weight: 800;
+        margin-bottom: -147px;
+        cursor: pointer;
+        border: none;
+      }
+      button:hover {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 83, 123, 1) 0%,
+          rgba(255, 105, 58, 1) 100%
+        );
+        box-shadow: 0 10px 25px #ff625766;
+      }
+    }
+  </style>
+  <body>
+    <main class="container">
+      <section class="box">
+        <figure>
+          <img src="assets/images/icon-success.svg" alt="icon for success" />
+        </figure>
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <strong>ash@loremcompany.com.</strong> Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+      </section>
+      <button>Dismiss message</button>
+    </main>
+    <script>
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
